@@ -9,8 +9,11 @@
         "https://inbox.google.com/*"
       ],
       "js": ["inboxsdk.js","content.js"],
-      "run_at": "document_end"
+      "run_at": "document_start"
     }
+  ],
+  "web_accessible_resources": [
+    "monkey.png"
   ],
   "permissions": [
     "https://mail.google.com/",

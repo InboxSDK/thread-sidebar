@@ -1,16 +1,14 @@
-InboxSDK.load(1, 'sidebar-example').then(function(sdk) {
+'use strict';
 
-	sdk.Conversations.registerThreadViewHandler(function(threadView){
-
-		var el = document.createElement("div");
+InboxSDK.load(2, 'sidebar-example').then(sdk => {
+	sdk.Conversations.registerThreadViewHandler(threadView => {
+		const el = document.createElement("div");
 		el.innerHTML = 'Hello world!';
-
 
 		threadView.addSidebarContentPanel({
 			title: 'Sidebar Example',
-			el: el
+			iconUrl: chrome.runtime.getURL('monkey.png'),
+			el
 		});
-
 	});
-
 });
